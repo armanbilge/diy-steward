@@ -25,5 +25,5 @@ jobs:
           github-token: ${{ steps.generate-token.outputs.token }}
           author-email: 123456+your-app-name[bot]@users.noreply.github.com
           author-name: your-app-name[bot]
-          github-app-id: 123465
+          github-app-id: 123456
           github-app-key: ${{ secrets.APP_PRIVATE_KEY }}
