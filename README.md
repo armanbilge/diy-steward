@@ -25,3 +25,17 @@ Set up your very own Scala Steward!
 10. That's it! To manually trigger your new steward, navigate to the Actions tab on this repo, select the Scala Steward workflow, and click "Run Workflow".
 
 Please open issues or PRs with any improvements and fixes for this template. Thank you!
+
+## Running with repos.md
+
+If you [use a repos.md file to list repositories](https://github.com/scala-steward-org/scala-steward-action#using-a-file-to-list-repositories), be sure to remove the `github-app-id` and `github-app-key` from the `scala-steward-action` configuration.  For example:
+
+```yaml
+      - name: Launch Scala Steward
+        uses: scala-steward-org/scala-steward-action@v2
+        with:
+          github-token: ${{ steps.generate-token.outputs.token }}
+          author-email: 123456+your-app-name[bot]@users.noreply.github.com
+          author-name: your-app-name[bot]
+          repos-file: 'repos.md'
+```
