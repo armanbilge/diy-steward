@@ -5,6 +5,8 @@ on:
     - cron: '0 */4 * * *'
   workflow_dispatch:
 
+concurrency: steward
+
 jobs:
   steward:
     runs-on: ubuntu-latest
