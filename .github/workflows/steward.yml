@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     name: DIY Steward
     steps:
+      - uses: sbt/setup-sbt@v1
+    
       - uses: actions/checkout@v4
           
       - name: Generate token
